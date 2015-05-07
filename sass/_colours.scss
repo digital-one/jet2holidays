@@ -1,0 +1,34 @@
+/*Palette*/
+$brand-blue: #2F71B0;
+$brand-light-blue: #6EBEE3;
+$brand-red: #D1020E;
+$brand-yellow: #F9B700;
+$brand-orange: #F38E01;
+$brand-fcp: #F38E01;
+$brand-fcp-light: #FEC575;
+$brand-active: #2FAF56;
+
+$family-fave: $brand-yellow;
+$on-tour: #272876;
+$luxe: #c1c1c1;
+.text-blue {
+    color: $brand-blue;
+}
+.text--light-blue {
+    color: $brand-light-blue;
+}
+.text-red {
+    color: $brand-red;
+}
+.text-yellow {
+    color: $brand-yellow;
+}
+.text-orange {
+    color: $brand-orange;
+}
+.text-fcp {
+    color: $brand-fcp;
+}
+.text-fcp-light {
+    color: $brand-fcp-light;
+}

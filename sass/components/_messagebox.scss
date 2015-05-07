@@ -1,0 +1,98 @@
+.messagebox {
+    background: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    font-size: 18px; 
+    //display: none;
+    border-bottom: 3px solid #1E3146;
+    padding: 4% 4% 2em;
+    .wrapper{
+        position: relative;
+        margin:0 auto;
+        width:100%;
+    }
+    .header{
+        border-bottom: 1px dotted #1E3146;
+        padding-bottom: 10px;
+        margin-bottom: 30px;
+        position: relative;
+        @extend .clearfix;
+    }
+    .container{
+        width:100%;
+        padding:0;
+        p{
+            margin: 0;
+            color: #1E3146;
+            font-size: 18px;
+            margin: 0;
+            font-weight: 700; 
+            i,span{
+                height:50px;
+                line-height: 50px;
+                display: inline-block;
+                float:left;
+            }
+            i{
+                width:50px;
+                line-height: 46px;
+                text-align: center;
+                border:3px solid #000;
+                font-size: 32px;
+                @include border-radius(50%);
+                margin-right: 10px;
+            }
+        }
+        ul{
+            padding:0;
+            margin:0 0 0 17px;
+        }
+     }
+     a#close{
+        color: #fff;
+        background: #1E3146;
+        padding: .4em 1em;
+        border-radius: 0 0 3px 3px;
+        cursor: pointer;
+        text-decoration: none;
+        font-size: .9em;
+        font-family: $helvetica;
+        @include abs-pos(60px,0,auto,auto); 
+        @media only screen and (max-width : $screen-xs){
+            @include abs-pos(40px,0,auto,auto);
+        }
+     }   
+}
+
+/* Media Queries */
+
+@media only screen and (max-width : $screen-xs){
+
+    .messagebox {
+        font-size: 14px;
+        .wrapper{
+             width:80%;
+            max-width: 600px;
+        }
+        .container{
+            p{
+                font-size: 14px;
+                i,span{
+                    line-height: 30px;
+                    height: 30px; 
+                }
+                i{
+                    width:30px;
+                    height: 30px;
+                    line-height: 26px;
+                    font-size: 20px;
+                    border: 2px solid #000;
+                }
+            }
+        }
+    }
+
+}
+

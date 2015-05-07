@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Jet2holidays</title>
+<link href="stylesheets/styles.css" rel="stylesheet">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<script src="javascripts/libs/modernizr-2.6.2.min.js"></script>
+</head>
+<body>
+    <!-- Validation message -->
+    <div class="messagebox">
+    <div class="wrapper clearfix">
+        <div class="container">
+            <div class="header clearfix">
+                <p><i class="fa fa-info"></i><span>We require the following information:</span></p>
+                <a href="#" id="close" class="messagebox-close">X Close</a>
+            </div>
+            <div class="content clearfix"><ul><li>Please select a destination</li><li>Please select a departure date</li><li>Please select a duration</li></ul></div>
+        </div>
+    </div>
+</div>
+<!-- / Validation message -->
+<nav class="oc-nav oc-nav-left">
+    <ul>
+    	<li><a href="#">Home</a></li>
+        <li><a href="#">Beach Holidays</a></li>
+        <li><a href="#">City Breaks</a></li>
+        <li><a href="#">Flight Only</a></li>
+        <li><a href="#">Saved Holidays</a></li>
+        <li><a href="#">Favourite Hotels</a></li>
+        <li><a href="#">Manage My Booking</a></li>
+        <li><a href="#">Majorca Holidays</a></li>
+        <li><a href="#">Car Hire</a></li>
+        <li><a href="#">Contact Us</a></li>
+    </ul>  
+    <div class="nav-telephone padding--lg">
+        <p>Prefer to speak to one of our holiday advisors?</p>
+        <a class="btn btn-default" href="tel:+441134570545"><i class="fa fa-phone"></i> 0113 457 0545</a>
+    </div>
+    <div class="nav-apps margin-top--md margin-bottom--md">
+        <p>Download our FREE Apps</p>
+        <ul class="list-inline">
+            <li><a href="#"><img src="img/appstore.svg" alt="App Store" /></a></li>
+            <li><a href="#"><img src="img/google.svg" alt="Google" /></a></li>
+        </ul>
+    </div>
+    <div class="nav-abta padding--lg">
+        <img src="img/abta-atol.svg" alt="Abta Atol" />
+    </div>
+    <ul>
+    	<li><a href="#">Credit Card Info</a></li>
+        <li><a href="#">Why Book with Us?</a></li>
+        <li><a href="#">Terms &amp; Conditions</a></li>
+        <li><a href="#">Your Privacy</a></li>
+        <li><a href="#">Terms of Use</a></li>
+    </ul> 
+</nav>
+<div class="site-overlay"></div>
+<header>
+    <div class="container">
+        <a class="menu-btn" href="#nav"><i class="fa fa-navicon fa-3x"></i></a>
+        <a href="#"><img src="img/jet2holidays.svg" alt="Jet2holidays" /></a>
+    </div>
+</header>
+<div id="container">
+    <section class="search padding-top--md padding-bottom--lg fcp">
+        <div class="container">
+            <div class="btn-group btn-group-justified margin-bottom--md" role="group">
+                <a class="btn btn-default" role="button" href="#">Beach<br />Holidays</a>
+                <a class="btn btn-default" role="button" href="#">City<br />Breaks</a>
+                <a class="btn btn-default active" role="button" href="#">Free Child<br />Places</a>
+            </div>
+            <h3 class="margin-top--0">Free Child Place Finder</h3>
+            <form class="margin-top--md">
+                <fieldset class="margin-bottom--md flying-from">
+                    <div class="select-departure-airport input" type="text"><i class="fa fa-plane"></i> <span>Flying from...</span></div>
+                </fieldset>
+                <fieldset class="destination">
+                    <div class="select-destination input" type="text"><i class="fa fa-globe"></i> <span>Going to...</span></div>
+                </fieldset>
+                <div class="row margin-top--md margin-bottom--md">
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="select-dates date-select">
+                            <h5 class="padding--sm margin--0">Leaving</h5>
+                            <div class="padding--sm">
+                                <span class="date pull-left margin-right--sm"><strong>13</strong></span>
+                                <div class="pull-left">
+                                    <span class="month">Aug 2015</span>
+                                    <span class="day">Thursday</span>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="date-select">
+                            <h5 class="padding--sm margin--0">Duration</h5>
+                            <div class="padding--sm">
+                                <div class="duration"><strong class="hidden">7</strong> <span>Please Select</span></div>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+                <div class="occupancy">
+                    <h4>Rooms &amp; Passengers</h4>
+                    <a class="select-occupancy"><strong class="margin-right--sm">1 Room</strong> 2 Adults, 0 Children</a>
+                </div>   
+                <a class="btn btn-lg btn-block btn-blue margin-top--md" href="search-results.html">Search Holidays</a>
+            </form>
+        </div>
+    </section>
+</div>
+    
+<!-- OVERLAYS -->
+<div class="overlay departure-airports-control">
+    <div class="overlay--scroll">
+        <div class="overlay--header fcp">
+            <div class="container">
+                <h4 class="pull-left">Select Airport(s)</h4>
+                <a href="#" class="btn btn-default pull-right done">Done</a>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="overlay--content">
+            <div class="check-list">
+                <ul>
+                    <li class="active">Airport Name <i class="fa fa-check"></i></li>
+                    <li>Airport Name <i class="fa fa-check"></i></li>
+                    <li>Airport Name <i class="fa fa-check"></i></li>
+                    <li>Airport Name <i class="fa fa-check"></i></li>
+                    <li>Airport Name <i class="fa fa-check"></i></li>
+                    <li>Airport Name <i class="fa fa-check"></i></li>
+                    <li>Airport Name <i class="fa fa-check"></i></li>
+                    <li>Airport Name <i class="fa fa-check"></i></li>
+                    <li>Airport Name <i class="fa fa-check"></i></li>
+                    <li>Airport Name <i class="fa fa-check"></i></li>
+                    <li>Airport Name <i class="fa fa-check"></i></li>
+                </ul>
+            </div>
+        </div>
+    </div>    
+</div>
+
+<div class="overlay destinations-control">
+    <div class="overlay--scroll">
+        <div class="overlay--header fcp">
+            <div class="container">
+                <h4 class="pull-left">Select Destination(s)</h4>
+                <a href="#" class="btn btn-default pull-right done">Done</a>
+                <div class="clearfix"></div>
+                <div class="btn-group btn-group-justified margin-top--md" role="group">
+                    <a class="btn btn-default active" role="button" href="#">by Country</a>
+                    <a class="btn btn-default" role="button" href="#">A-Z</a>
+                    <a class="btn btn-default selected" role="button" href="#">Selected <span>4</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="overlay--search">
+            <a class="overlay--search-btn">
+                <i class="fa fa-search"></i> Type Destination Name
+            </a>
+        </div>
+        <div class="overlay--content">
+            <div class="check-list">
+                <ul>
+                    <li class="country-title active">Country <i class="fa fa-check"></i></li>
+                    <li class="active">Resort <i class="fa fa-check"></i></li>
+                    <li class="active">Resort <i class="fa fa-check"></i></li>
+                    <li class="active">Resort <i class="fa fa-check"></i></li>
+                    <li class="country-title">Country</li>
+                    <li>Resort <i class="fa fa-check"></i></li>
+                    <li>Resort <i class="fa fa-check"></i></li>
+                    <li class="country-title">Country</li>
+                    <li>Resort <i class="fa fa-check"></i></li>
+                    <li>Resort <i class="fa fa-check"></i></li>
+                    <li class="country-title">Country</li>
+                    <li>Resort <i class="fa fa-check"></i></li>
+                    <li>Resort <i class="fa fa-check"></i></li>
+                </ul>
+            </div>
+        </div>
+    </div>    
+</div>
+
+<div id="destination-filter" class="overlay">
+    <div class="overlay--scroll">
+        <div class="overlay--header fcp">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-9">
+                        <div class="search-filter">
+                            <div class="input-wrap">
+                                <input class="search" placeholder="Type Destination Name" />
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="col-xs-3">
+                        <a class="btn btn-default btn-block back">Done</a>
+                    </div>
+                </div>
+                 
+            </div>
+        </div>
+          
+        <div class="overlay--content">
+            <div class="check-list">
+                <ul class="list">
+                    <li class="country-title active"><span class="filter">Balearics <i class="fa fa-check"></i></span></li>
+                    <li class="active"><span class="filter">Ibiza <i class="fa fa-check"></i></span></li>
+                    <li class="active"><span class="filter">Majorca <i class="fa fa-check"></i></span></li>
+                    <li class="active"><span class="filter">Menorca <i class="fa fa-check"></i></span></li>
+                    <li class="active"><span class="filter">Palma City <i class="fa fa-check"></i></span></li>
+                    <li class="country-title"><span class="filter">Canary Islands <i class="fa fa-check"></i></span></li>
+                    <li><span class="filter">Fuerteventura <i class="fa fa-check"></i></span></li>
+                    <li><span class="filter">Gran Canaria <i class="fa fa-check"></i></span></li>
+                    <li><span class="filter">Lanzarote <i class="fa fa-check"></i></span></li>
+                    <li><span class="filter">Las Palmas City <i class="fa fa-check"></i></span></li>
+                    <li><span class="filter">Tenerife <i class="fa fa-check"></i></span></li>
+                </ul>
+            </div>
+        </div>
+    </div>    
+</div>
+
+<div class="overlay dates-control">
+    <div class="overlay--scroll">
+        <div class="overlay--header fcp">
+            <div class="container">
+                <h4 class="pull-left">Select Departure Date</h4>
+                <a href="#" class="btn btn-default pull-right done">Done</a>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="overlay--content">
+            <div class="container">
+                <div id="datepicker">
+                </div>
+            </div>
+        </div>
+    </div>    
+</div>
+    
+<div class="overlay occupancy-control">
+    <div class="overlay--scroll">
+        <div class="overlay--header fcp">
+            <div class="container">
+                <h4 class="pull-left">Select Rooms &amp; Passengers</h4>
+                <a href="#" class="btn btn-default pull-right done">Done</a>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="overlay--content">
+            <div class="container padding-top--md padding-bottom--md">
+                <div class="number-toggle withborder padding--sm">
+                    <div class="number-toggle--label pull-left">
+                        Number of Rooms
+                    </div>
+                    <div class="number-toggle--nav pull-right">
+                        <ul class="list-inline margin-bottom--0">
+                            <li><i class="fa fa-minus-circle"></i></li>
+                            <li><span class="number-toggle--number">0</span></li>
+                            <li><i class="fa fa-plus-circle"></i></li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="fcp padding--md room margin-top--md">
+                    <h4 class="margin-top--0">Room 1</h4>
+                    <div class="number-toggle padding--sm">
+                        <div class="number-toggle--label pull-left">
+                            Adults
+                        </div>
+                        <div class="number-toggle--nav pull-right">
+                            <ul class="list-inline margin-bottom--0">
+                                <li><i class="fa fa-minus-circle"></i></li>
+                                <li><span class="number-toggle--number">2</span></li>
+                                <li><i class="fa fa-plus-circle"></i></li>
+                            </ul>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="number-toggle padding--sm margin-top--md">
+                        <div class="number-toggle--label pull-left">
+                            Children
+                        </div>
+                        <div class="number-toggle--nav pull-right">
+                            <ul class="list-inline margin-bottom--0">
+                                <li><i class="fa fa-minus-circle"></i></li>
+                                <li><span class="number-toggle--number">2</span></li>
+                                <li><i class="fa fa-plus-circle"></i></li>
+                            </ul>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="child-ages margin-top--md">
+                        <h4>Age of child 1</h4>
+                        <div class="select-tag">
+                            <select>
+                                <option>0</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                        </div> 
+                        <h4>Age of child 2</h4>
+                        <div class="select-tag">
+                            <select>
+                                <option>0</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                        </div> 
+                    </div>
+                </div>
+                <a class="btn btn-lg btn-block btn-blue margin-top--md">Confirm</a>
+            </div>    
+        </div>
+    </div>
+</div>
+<footer id="footer" role="footer">
+<a id="back-to-top" href="#" onclick="ga('send','event','link', 'click', 'Footer Back to Top');">Back to top</a>
+<div id="cta">
+<p>Prefer to speak to one of our expert holiday advisors?</p>
+<p><a href="tel:0113 457 0545" onclick="ga('send','event','link', 'click', 'Footer Telephone');">0113 457 0545</a></p>
+</div>
+<div class="affiliates">
+<ul>
+<li><img src="https://m.jet2holidays.com/docs/mobile-site/mobile-atol.svg" alt="Atol" width="50" height="50"></li>
+<li><img src="https://m.jet2holidays.com/docs/mobile-site/mobile-abta.svg" alt="ABTA" width="80" height="50"></li>
+</ul>
+</div>
+<p><small>&copy; Jet2holidays.com 2002-2015 A subsidiary of Dart Group PLC</small></p>
+<nav id="footer-links">
+<ul><li><a href="/mobile/terms-and-conditions" onclick="ga('send','event','link', 'click', 'Footer Terms and Condtions');">Terms &amp; Conditions</a></li>
+    <li><a href="/mobile/privacy-policy" onclick="ga('send','event','link', 'click', 'Footer Privacy');">Privacy</a></li>
+    <li><a href="http://www.jet2holidays.com/?desktop=true" onclick="ga('send','event','link', 'click', 'Footer Main website');">Main Website</a></li>
+</ul>
+</nav>
+</footer>
+   
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script src="javascripts/libs/bootstrap.min.js"></script>
+<script src="javascripts/nav.js"></script>
+<script src="http://listjs.com/no-cdn/list.js"></script>
+<script>
+var options = {
+  valueNames: [ 'filter' ]
+};
+var userList = new List('destination-filter', options);
+</script>
+<script>
+$(function() {
+    $( "#datepicker" ).datepicker({
+      changeMonth: true,
+      changeYear: true,
+      prevText: " ",
+      nextText: " "
+    });
+});
+</script>
+    
+<script>
+    $(document).ready(function() {
+        var windowH = $(window).height();
+        $('.overlay--scroll').css('height', windowH + 'px');
+    });
+</script>
+<script>
+    $('.select-departure-airport').click(function() {
+        $('.departure-airports-control').toggleClass('active');
+        setTimeout(function() {
+            $('#container, header').toggleClass('hidden');
+        }, 300);
+    });
+    $('.select-destination').click(function() {
+        $('.destinations-control').toggleClass('active');
+        setTimeout(function() {
+            $('#container, header').toggleClass('hidden');
+        }, 300);
+    });
+    $('.overlay--search-btn').click(function() {
+        $('#destination-filter').toggleClass('active');
+          $( ".search" ).focus();
+
+    });
+    $('.select-dates').click(function() {
+        $('.dates-control').toggleClass('active');
+        setTimeout(function() {
+            $('#container, header').toggleClass('hidden');
+        }, 300);
+    });
+    $('.select-occupancy').click(function() {
+        $('.occupancy-control').toggleClass('active');
+        setTimeout(function() {
+            $('#container, header').toggleClass('hidden');
+        }, 300);
+    });
+    $('.check-list li').click(function() {
+        $(this).toggleClass('active');
+    });
+    $(".back").click(function() {
+        $(this).parents().removeClass('active');
+    });
+    $(".done").click(function() {
+      $(".overlay").removeClass( "active" );
+        $("#container, header").removeClass("hidden");
+    });
+</script>
+</body>
+</html>

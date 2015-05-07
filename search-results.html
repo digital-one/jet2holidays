@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Jet2holidays</title>
+<link href="stylesheets/styles.css" rel="stylesheet">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<script src="javascripts/libs/modernizr-2.6.2.min.js"></script>
+
+</head>
+<body>
+<nav class="oc-nav oc-nav-left">
+    <ul>
+    	<li><a href="#">Home</a></li>
+        <li><a href="#">Beach Holidays</a></li>
+        <li><a href="#">City Breaks</a></li>
+        <li><a href="#">Flight Only</a></li>
+        <li><a href="#" id="nav-saved">Saved Holidays<span>2</span></a></li>
+        <li><a href="#">Favourite Hotels</a></li>
+        <li><a href="#">Manage My Booking</a></li>
+        <li><a href="#">Majorca Holidays</a></li>
+        <li><a href="#">Car Hire</a></li>
+        <li><a href="#">Contact Us</a></li>
+    </ul>  
+    <div class="nav-telephone padding--lg">
+        <p>Prefer to speak to one of our holiday advisors?</p>
+        <a class="btn btn-default" href="tel:+441134570545"><i class="fa fa-phone"></i> 0113 457 0545</a>
+    </div>
+    <div class="nav-apps margin-top--md margin-bottom--md">
+        <p>Download our FREE Apps</p>
+        <ul class="list-inline">
+            <li><a href="#"><img src="img/appstore.svg" alt="App Store" /></a></li>
+            <li><a href="#"><img src="img/google.svg" alt="Google" /></a></li>
+        </ul>
+    </div>
+    <div class="nav-abta padding--lg">
+        <img src="img/abta-atol.svg" alt="Abta Atol" />
+    </div>
+    <ul>
+    	<li><a href="#">Credit Card Info</a></li>
+        <li><a href="#">Why Book with Us?</a></li>
+        <li><a href="#">Terms &amp; Conditions</a></li>
+        <li><a href="#">Your Privacy</a></li>
+        <li><a href="#">Terms of Use</a></li>
+    </ul> 
+</nav>
+<div class="site-overlay"></div>
+<header>
+    <div class="container">
+        <a class="menu-btn" href="#nav"><i class="fa fa-navicon fa-3x"></i></a>
+        <span id="saved-counter" class="animate">1</span>
+        <a href="#"><img src="img/jet2holidays.svg" alt="Jet2holidays" /></a>
+    </div>
+</header>
+<div class="loader fcp">
+    <div class="loader--text">
+        <span>£60</span> Low Deposit
+    </div>
+    <img src="img/loader.svg" alt="Loading..." />
+</div>
+<div id="container">
+    <section class="padding-top--md padding-bottom--md fcp">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-2">
+                    <a href="index.html">
+                        <div class="filter-label filter-label--icon padding--sm">
+                            <i class="fa fa-search fa-2x"></i>
+                        </div>
+                    </a>    
+                </div>    
+                <div class="col-xs-5">
+                    <div class="filter-label padding--sm filter--holidays">
+                        <h3 class="margin--0">Filter</h3>
+                        <p class="margin--0"><span>57</span> Holidays</p>
+                        <i class="fa fa-filter"></i>
+                    </div>
+                </div>
+                <div class="col-xs-5">
+                    <div class="filter-label padding--sm filter--sortby">
+                        <h3 class="margin--0">Sort By</h3>
+                        <p class="margin--0">Recommended</p>
+                        <i class="fa fa-sort"></i>
+                    </div>
+                </div>
+            </div>    
+        </div>
+    </section>
+    <section class="search-results fcp">
+        <div class="container">
+            <div class="search-results--tabs" role="tabpanel">
+                <ul class="nav nav-tabs " role="tablist">
+                    <li role="presentation" class="active"><a href="#results" id="results-tab" role="tab" data-toggle="tab" aria-controls="results" aria-expanded="true">Fri 7th May</a></li>
+                    <li role="presentation"><a href="#calendar" role="tab" id="calendar-tab" data-toggle="tab" aria-controls="calendar">Other Dates in May</a></li>
+                </ul>
+                <div id="myTabContent" class="tab-content padding-top--md padding-bottom--lg">
+                    <div role="tabpanel" class="tab-pane fade in active" id="results" aria-labelledBy="results-tab">
+                        <!-- SEARCH RESULT -->
+                        <div class="hotel-result margin-bottom--md">
+                            <div class="hotel-result--head padding--md">
+                                <div class="hotel-result--stars pull-right text-right">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <span>Our Rating</span>
+                                </div>
+                                <h3 class="margin-top--0">Silchoro Apartments</h3>
+                                <p class="margin-bottom--0">Albufeira, Algarve</p>
+                            </div>
+                           
+                            <figure>
+                                 <div class="product brand-4"><h4>Family Favourites</h4></div>
+                                 <img src="http://www.jet2holidays.com/HotelImages/Web/FAO_70283_SILCHORO_APTS_1012_01.jpg" />
+                             </figure>
+                            <div class="hotel-result--content padding--md padding-top--0">
+                                <div class="row">
+                                    <div class="hotel-result--options">
+                                        <div class="col-xs-4">
+                                            <a class="hotel-result--btn"><i class="fa fa-camera-retro"></i> Gallery</a>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <a class="hotel-result--btn save"><i class="fa fa-plus-circle"></i> <span>Save</span></a>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <a class="hotel-result--btn"><i class="fa fa-share-alt"></i> Share</a>
+                                        </div>
+                                    </div>    
+                                </div>
+                                <div class="hotel-result--info padding--md">
+                                    <div class="row">
+                                        <div class="col-xs-6"><i class="fa fa-plane"></i> Leeds Bradford</div>
+                                        <div class="col-xs-6"><i class="fa fa-cutlery"></i> Self Catering</div>
+                                        <div class="clearfix padding--sm"></div>
+                                        <div class="col-xs-6"><i class="fa fa-calendar"></i> Sat 27 May 2015</div>
+                                        <div class="col-xs-6"><i class="fa fa-child"></i> Free Child Places</div>
+                                    </div>
+                                </div>   
+                                <div class="hotel-result--sale padding--sm margin-bottom--sm">
+                                    <ul class="list-unstyled margin--0">
+                                        <li class="text-fcp">1 x Free Child Place Applied</li>
+                                        <li class="text-red">3 x £80pp Discount Included -£240</li>
+                                    </ul>    
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <div class="trip-advisor padding-top--sm">
+                                            <p class="margin--0">TripAdvisor Rating</p>
+                                            <img src="https://www.tripadvisor.com/img/cdsi/img2/ratings/traveler/4.0-24283-5.png" />
+                                            <p class="margin--0">Based on 845 Reviews</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <div class="hotel-result--price text-right">
+                                            <span class="text-red">£350<sub>pp</sub></span>
+                                            <span class="text-blue">Holiday price <strong>£700</strong></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="btn btn-lg btn-block btn-yellow margin-top--md">Confirm</a>
+                            </div>
+                        </div>
+
+                        <!--/SEARCH RESULT-->
+
+                         <!-- SEARCH RESULT -->
+                        <div class="hotel-result margin-bottom--md">
+                            <div class="hotel-result--head padding--md">
+                                <div class="hotel-result--stars pull-right text-right">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <span>Our Rating</span>
+                                </div>
+                                <h3 class="margin-top--0">Silchoro Apartments</h3>
+                                <p class="margin-bottom--0">Albufeira, Algarve</p>
+                            </div>
+                           
+                            <figure>
+                                 <div class="product brand-3"><h4>On Tour</h4></div>
+                                 <img src="http://www.jet2holidays.com/HotelImages/Web/FAO_70283_SILCHORO_APTS_1012_01.jpg" />
+                             </figure>
+                            <div class="hotel-result--content padding--md padding-top--0">
+                                <div class="row">
+                                    <div class="hotel-result--options">
+                                        <div class="col-xs-4">
+                                            <a class="hotel-result--btn"><i class="fa fa-camera-retro"></i> Gallery</a>
+                                        </div>
+                                        <div class="col-xs-4">
+                                          <a class="hotel-result--btn save"><i class="fa fa-plus-circle"></i> <span>Save</span></a>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <a class="hotel-result--btn"><i class="fa fa-share-alt"></i> Share</a>
+                                        </div>
+                                    </div>    
+                                </div>
+                                <div class="hotel-result--info padding--md">
+                                    <div class="row">
+                                        <div class="col-xs-6"><i class="fa fa-plane"></i> Leeds Bradford</div>
+                                        <div class="col-xs-6"><i class="fa fa-cutlery"></i> Self Catering</div>
+                                        <div class="clearfix padding--sm"></div>
+                                        <div class="col-xs-6"><i class="fa fa-calendar"></i> Sat 27 May 2015</div>
+                                        <div class="col-xs-6"><i class="fa fa-child"></i> Free Child Places</div>
+                                    </div>
+                                </div>   
+                                <div class="hotel-result--sale padding--sm margin-bottom--sm">
+                                    <ul class="list-unstyled margin--0">
+                                        <li class="text-fcp">1 x Free Child Place Applied</li>
+                                        <li class="text-red">3 x £80pp Discount Included -£240</li>
+                                    </ul>    
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <div class="trip-advisor padding-top--sm">
+                                            <p class="margin--0">TripAdvisor Rating</p>
+                                            <img src="https://www.tripadvisor.com/img/cdsi/img2/ratings/traveler/4.0-24283-5.png" />
+                                            <p class="margin--0">Based on 845 Reviews</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <div class="hotel-result--price text-right">
+                                            <span class="text-red">£350<sub>pp</sub></span>
+                                            <span class="text-blue">Holiday price <strong>£700</strong></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="btn btn-lg btn-block btn-yellow margin-top--md">Confirm</a>
+                            </div>
+                        </div>
+
+                        <!--/SEARCH RESULT-->
+                          <!-- SEARCH RESULT -->
+                        <div class="hotel-result margin-bottom--md">
+                            <div class="hotel-result--head padding--md">
+                                <div class="hotel-result--stars pull-right text-right">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <span>Our Rating</span>
+                                </div>
+                                <h3 class="margin-top--0">Silchoro Apartments</h3>
+                                <p class="margin-bottom--0">Albufeira, Algarve</p>
+                            </div>
+                           
+                            <figure>
+                                 <div class="product brand-6"><h4>Family Luxe</h4></div>
+                                 <img src="http://www.jet2holidays.com/HotelImages/Web/FAO_70283_SILCHORO_APTS_1012_01.jpg" />
+                             </figure>
+                            <div class="hotel-result--content padding--md padding-top--0">
+                                <div class="row">
+                                    <div class="hotel-result--options">
+                                        <div class="col-xs-4">
+                                            <a class="hotel-result--btn"><i class="fa fa-camera-retro"></i> Gallery</a>
+                                        </div>
+                                        <div class="col-xs-4">
+                                           <a class="hotel-result--btn save"><i class="fa fa-plus-circle"></i> <span>Save</span></a>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <a class="hotel-result--btn"><i class="fa fa-share-alt"></i> Share</a>
+                                        </div>
+                                    </div>    
+                                </div>
+                                <div class="hotel-result--info padding--md">
+                                    <div class="row">
+                                        <div class="col-xs-6"><i class="fa fa-plane"></i> Leeds Bradford</div>
+                                        <div class="col-xs-6"><i class="fa fa-cutlery"></i> Self Catering</div>
+                                        <div class="clearfix padding--sm"></div>
+                                        <div class="col-xs-6"><i class="fa fa-calendar"></i> Sat 27 May 2015</div>
+                                        <div class="col-xs-6"><i class="fa fa-child"></i> Free Child Places</div>
+                                    </div>
+                                </div>   
+                                <div class="hotel-result--sale padding--sm margin-bottom--sm">
+                                    <ul class="list-unstyled margin--0">
+                                        <li class="text-fcp">1 x Free Child Place Applied</li>
+                                        <li class="text-red">3 x £80pp Discount Included -£240</li>
+                                    </ul>    
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <div class="trip-advisor padding-top--sm">
+                                            <p class="margin--0">TripAdvisor Rating</p>
+                                            <img src="https://www.tripadvisor.com/img/cdsi/img2/ratings/traveler/4.0-24283-5.png" />
+                                            <p class="margin--0">Based on 845 Reviews</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <div class="hotel-result--price text-right">
+                                            <span class="text-red">£350<sub>pp</sub></span>
+                                            <span class="text-blue">Holiday price <strong>£700</strong></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="btn btn-lg btn-block btn-yellow margin-top--md">Confirm</a>
+                            </div>
+                        </div>
+
+                        <!--/SEARCH RESULT-->
+                         <!-- SEARCH RESULT -->
+                        <div class="hotel-result margin-bottom--md">
+                            <div class="hotel-result--head padding--md">
+                                <div class="hotel-result--stars pull-right text-right">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <span>Our Rating</span>
+                                </div>
+                                <h3 class="margin-top--0">Silchoro Apartments</h3>
+                                <p class="margin-bottom--0">Albufeira, Algarve</p>
+                            </div>
+                           
+                            <figure>
+                                 <div class="product brand-6"><h4>Luxe Collection</h4></div>
+                                 <img src="http://www.jet2holidays.com/HotelImages/Web/FAO_70283_SILCHORO_APTS_1012_01.jpg" />
+                             </figure>
+                            <div class="hotel-result--content padding--md padding-top--0">
+                                <div class="row">
+                                    <div class="hotel-result--options">
+                                        <div class="col-xs-4">
+                                            <a class="hotel-result--btn"><i class="fa fa-camera-retro"></i> Gallery</a>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <a class="hotel-result--btn save"><i class="fa fa-plus-circle"></i> <span>Save</span></a>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <a class="hotel-result--btn"><i class="fa fa-share-alt"></i> Share</a>
+                                        </div>
+                                    </div>    
+                                </div>
+                                <div class="hotel-result--info padding--md">
+                                    <div class="row">
+                                        <div class="col-xs-6"><i class="fa fa-plane"></i> Leeds Bradford</div>
+                                        <div class="col-xs-6"><i class="fa fa-cutlery"></i> Self Catering</div>
+                                        <div class="clearfix padding--sm"></div>
+                                        <div class="col-xs-6"><i class="fa fa-calendar"></i> Sat 27 May 2015</div>
+                                        <div class="col-xs-6"><i class="fa fa-child"></i> Free Child Places</div>
+                                    </div>
+                                </div>   
+                                <div class="hotel-result--sale padding--sm margin-bottom--sm">
+                                    <ul class="list-unstyled margin--0">
+                                        <li class="text-fcp">1 x Free Child Place Applied</li>
+                                        <li class="text-red">3 x £80pp Discount Included -£240</li>
+                                    </ul>    
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <div class="trip-advisor padding-top--sm">
+                                            <p class="margin--0">TripAdvisor Rating</p>
+                                            <img src="https://www.tripadvisor.com/img/cdsi/img2/ratings/traveler/4.0-24283-5.png" />
+                                            <p class="margin--0">Based on 845 Reviews</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <div class="hotel-result--price text-right">
+                                            <span class="text-red">£350<sub>pp</sub></span>
+                                            <span class="text-blue">Holiday price <strong>£700</strong></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="btn btn-lg btn-block btn-yellow margin-top--md">Confirm</a>
+                            </div>
+                        </div>
+
+                        <!--/SEARCH RESULT-->
+                        <div class="more-results text-center">
+                            <a class="btn btn-default">Show More</a>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="calendar" aria-labelledBy="calendar-tab">
+                        <div id="datepicker" class="margin-bottom--lg invert">
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </div>
+    </section>
+</div>
+    
+<!-- OVERLAYS -->
+<div class="overlay sortby-control">
+    <div class="overlay--scroll">
+        <div class="overlay--header fcp">
+            <div class="container">
+                <h4 class="pull-left">Sort By</h4>
+                <a href="#" class="btn btn-default pull-right done">Done</a>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="overlay--content">
+            <div class="check-list">
+                <ul>
+                    <li class="active">Recommended <i class="fa fa-check"></i></li>
+                    <li>Price - Low to High <i class="fa fa-check"></i></li>
+                    <li>Price - High to Low <i class="fa fa-check"></i></li>
+                    <li>Star Rating - Low to High <i class="fa fa-check"></i></li>
+                    <li>Star Rating - High to Low <i class="fa fa-check"></i></li>
+                </ul>
+            </div>
+        </div>
+    </div>    
+</div>
+<div class="overlay filter-control">
+    <div class="overlay--scroll">
+        <div class="overlay--header fcp">
+            <div class="container">
+                <h4 class="pull-left">Filter <span>57</span> Free Child Places</h4>
+                <a href="#" class="btn btn-default pull-right done">Done</a>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="overlay--content fcp padding-top--lg padding-bottom--lg">
+            <div class="container">
+                <section class="filter--flying-from margin-bottom--md">
+                    <h4 class="margin-top--0"><i class="fa fa-plane"></i> Flying from...</h4>
+                    <div class="filter-control--btn padding--md">
+                        <i class="fa fa-chevron-right pull-right"></i>
+                        <span>Multiple Selected</span>
+                    </div>
+                </section>  
+                <section class="margin-bottom--md">
+                    <h4><i class="fa fa-map-marker"></i> Going to...</h4>
+                    <div class="filter-control--btn padding--md">
+                        <i class="fa fa-chevron-right pull-right"></i>
+                        <span>Please Select</span>
+                    </div>
+                </section>    
+                <section class="margin-bottom--lg">
+                    <h4><i class="fa fa-gbp"></i> Budget Per person...</h4>
+                    <div class="filter-control--btn padding--md">
+                        <i class="fa fa-chevron-right pull-right"></i>
+                        <span>Please Select</span>
+                    </div>
+                </section> 
+                <section class="margin-bottom--lg">
+                    <h4><i class="fa fa-star"></i> Star Rating</h4>
+                    <div class="btn-group btn-group-justified" role="group" data-toggle="buttons">
+                        <a class="btn btn-default" role="button">2 <i class="fa fa-star"></i></a>
+                        <a class="btn btn-default disabled" role="button">3 <i class="fa fa-star"></i></a>
+                        <a class="btn btn-default" role="button">4 <i class="fa fa-star"></i></a>
+                        <a class="btn btn-default" role="button">5 <i class="fa fa-star"></i></a>
+                    </div>
+                </section> 
+                <section class="margin-bottom--md">
+                    <h4><i class="fa fa-cutlery"></i> Board Basis</h4>
+                    <div class="filter-control--btn padding--md">
+                        <i class="fa fa-chevron-right pull-right"></i>
+                        <span>Any</span>
+                    </div>
+                </section>
+                <section class="margin-bottom--md">
+                    <h4><i class="fa fa-key"></i> Room Type</h4>
+                    <div class="filter-control--btn padding--md">
+                        <i class="fa fa-chevron-right pull-right"></i>
+                        <span>Any</span>
+                    </div>
+                </section>
+                <section class="margin-bottom--md">
+                    <h4><i class="fa fa-child"></i> Suitable For</h4>
+                    <div class="filter-control--btn padding--md">
+                        <i class="fa fa-chevron-right pull-right"></i>
+                        <span>Any</span>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="overlay departure-airports-control">
+    <div class="overlay--scroll">
+        <div class="overlay--header fcp">
+            <div class="container">
+                <h4 class="pull-left">Select Airport(s)</h4>
+                <a href="#" class="btn btn-default pull-right back"><i class="fa fa-chevron-left"></i> Back</a>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="overlay--content">
+            <div class="check-list">
+                <ul>
+                    <li class="active">Airport Name <span>(4)</span> <i class="fa fa-check"></i></li>
+                    <li class="disabled">Airport Name <span>(0)</span> <i class="fa fa-check"></i></li>
+                    <li>Airport Name <span>(12)</span> <i class="fa fa-check"></i></li>
+                    <li>Airport Name <span>(27)</span> <i class="fa fa-check"></i></li>
+                    <li>Airport Name <span>(8)</span> <i class="fa fa-check"></i></li>
+                    <li>Airport Name <span>(13)</span> <i class="fa fa-check"></i></li>
+                    <li>Airport Name <span>(3)</span> <i class="fa fa-check"></i></li>
+                </ul>
+            </div>
+        </div>
+    </div>    
+</div>
+
+<footer id="footer" role="footer">
+<a id="back-to-top" href="#" onclick="ga('send','event','link', 'click', 'Footer Back to Top');">Back to top</a>
+<div id="cta">
+<p>Prefer to speak to one of our expert holiday advisors?</p>
+<p><a href="tel:0113 457 0545" onclick="ga('send','event','link', 'click', 'Footer Telephone');">0113 457 0545</a></p>
+</div>
+<div class="affiliates">
+<ul>
+<li><img src="https://m.jet2holidays.com/docs/mobile-site/mobile-atol.svg" alt="Atol" width="50" height="50"></li>
+<li><img src="https://m.jet2holidays.com/docs/mobile-site/mobile-abta.svg" alt="ABTA" width="80" height="50"></li>
+</ul>
+</div>
+<p><small>&copy; Jet2holidays.com 2002-2015 A subsidiary of Dart Group PLC</small></p>
+<nav id="footer-links">
+<ul><li><a href="/mobile/terms-and-conditions" onclick="ga('send','event','link', 'click', 'Footer Terms and Condtions');">Terms &amp; Conditions</a></li>
+    <li><a href="/mobile/privacy-policy" onclick="ga('send','event','link', 'click', 'Footer Privacy');">Privacy</a></li>
+    <li><a href="http://www.jet2holidays.com/?desktop=true" onclick="ga('send','event','link', 'click', 'Footer Main website');">Main Website</a></li>
+</ul>
+</nav>
+</footer>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script src="javascripts/libs/bootstrap.min.js"></script>
+<script src="javascripts/nav.js"></script>
+<script src="javascripts/scripts.js"></script>
+<script>
+$(function() {
+    $( "#datepicker" ).datepicker({
+      changeMonth: true,
+      changeYear: true,
+      prevText: " ",
+      nextText: " "
+    });
+});
+</script>
+<script>
+    $(document).ready(function() {
+        var windowH = $(window).height();
+        $('.overlay--scroll').css('height', windowH + 'px');
+    });
+</script>
+<script>
+$(document).ready(function() {
+   window.setTimeout("fadeMyDiv();", 3000);
+}
+)
+function fadeMyDiv() {
+   $(".loader").fadeOut('slow');
+}
+</script>
+<script>
+    $('.filter--sortby').click(function() {
+        $('.sortby-control').toggleClass('active');
+        setTimeout(function() {
+            $('#container').toggleClass('hidden');
+        }, 300);
+    });
+    $('.filter--holidays').click(function() {
+        $('.filter-control').toggleClass('active');
+        setTimeout(function() {
+            $('#container').toggleClass('hidden');
+        }, 300);
+    });
+    $(".done").click(function() {
+      $(".overlay").removeClass( "active" );
+        $("#container").removeClass("hidden");
+    });
+    
+    $('.filter--flying-from .filter-control--btn').click(function() {
+        $('.departure-airports-control').toggleClass('active');
+    });
+    $('.check-list li').click(function() {
+        $(this).toggleClass('active');
+    });
+    $('.error a').click(function() {
+        $('.error').slideUp(200);
+    });
+    $(".back").click(function() {
+        $(this).parents().removeClass('active');
+    });
+</script>
+</body>
+</html>

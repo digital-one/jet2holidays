@@ -1,0 +1,14 @@
+@mixin bg-image($image,$svg:true){
+
+	$pngurl: $image + ".png";
+	$svgurl: $image + ".svg";
+	background-image:url($pngurl);
+	@if $svg == true{
+		.svg &{
+			background-image:url($svgurl);
+		}
+	}
+	background-position:left top;
+	background-repeat:no-repeat;
+	background-size: 100% auto;
+}

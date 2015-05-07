@@ -1,0 +1,721 @@
+@import "compass";
+@import "bourbon/bourbon";
+@import "breakpoint";
+@import "variables";
+@import "helpers/all";
+@import "templates/all";
+@import "components/all";
+@import "spacing";
+@import "colours";
+@import "navigation";
+@import "bootstrap-compass";
+@import "bootstrap-variables";
+@import "bootstrap";
+
+
+
+@font-face {
+	font-family: helvetica-med-light;
+	src: url(../fonts/helvetica-med-light-eot.eot);
+	src: url(../fonts/helvetica-med-light-eot.eot?#iefix) format(embedded-opentype),  url(../fonts/helvetica-med-light-woff.woff) format(woff),  url(../fonts/helvetica-med-light-ttf.ttf) format(truetype),  url(../fonts/helvetica-med-light-svg.svg#helvetica-med-light) format(svg);
+	font-weight: normal;
+	font-style: normal;
+}
+
+/*BUTTONS*/
+.btn.active {
+    box-shadow: none;
+    background: #FFF;
+    border: 1px solid #FFF;
+    color: $brand-fcp;
+}
+.btn-blue {
+    font-family: helvetica-med-light;
+    background: $brand-blue;
+    color: #FFF;
+}
+.btn-yellow {
+    font-family: helvetica-med-light;
+    background: $brand-yellow;
+    color: #FFF;
+    box-shadow: 0 3px 0 $brand-orange;
+}
+
+/*PADDING FOR STICKY HEADER*/
+body {
+    padding-top: 82px;
+}
+
+/*HEADER*/
+header {
+    padding: $space-sm 0;
+    text-align: center;
+    background: #FFF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 98;
+    -webkit-transition: -webkit-transform .3s cubic-bezier(.16, .68, .43, .99);
+	-moz-transition: -moz-transform .3s cubic-bezier(.16, .68, .43, .99);
+	-o-transition: -o-transform .3s cubic-bezier(.16, .68, .43, .99);
+	transition: transform .3s cubic-bezier(.16, .68, .43, .99);
+    -webkit-user-select: none;
+    img {
+        width: 200px;
+    }
+    .menu-btn {
+        float: left;
+        padding: $space-sm 0;
+        color: $brand-blue;
+    }
+}
+.oc-nav-active {
+    header {
+        -webkit-transform:translate3d(250px, 0, 0);
+	-moz-transform:translate3d(250px, 0, 0);
+	-ms-transform:translate3d(250px, 0, 0);
+	-o-transform:translate3d(250px, 0, 0);
+	transform:translate3d(250px, 0, 0);
+    }
+}
+#saved-counter{
+    background: $brand-fcp-light;
+    @include border-radius(50%);
+    color: #058305;
+    font-size: 18px;
+    width: 1.5em;
+    line-height: 1.5em;
+    height: 1.5em;
+    position: absolute;
+    left: 4.1em;
+    top:16px;
+    text-align: center;  
+    display: none;
+    &:after {
+        border: .6em solid rgba(0,0,0,0);
+        border-right-color: $brand-fcp-light;
+        border-right-width: .8em;
+        position: absolute;
+        display: block;
+        content: "";
+        left: -1.1em;
+        top: .2em;
+    }
+}
+
+
+/*CONTAINER PADDING*/
+.container {
+    padding-left: 25px;
+    padding-right: 25px;
+    position: relative;
+}
+
+/*FCP*/
+.fcp {
+    background: $brand-fcp;
+    h2, h3, h4 {
+        font-family: helvetica-med-light;
+        color: #FFF;
+    }
+}
+
+/*SEARCH*/
+.search {
+    fieldset {
+        position: relative;
+        .input {
+            background: #FFF;
+            @include border-radius($border-radius-base);
+            width: 100%;
+            padding: 15px;
+            font-size: 1.4em;
+            color: $brand-blue;
+            i {
+                margin-right: $space-sm;
+            }
+        }
+    }
+}
+
+/*DATE SELECTORS*/
+.date-select {
+    background: #FFF;
+    min-height: 96px;
+    @include border-radius($border-radius-base);
+    h5 {
+        font-family: helvetica-med-light;
+        text-align: center;
+        border-radius: $border-radius-base $border-radius-base 0 0; 
+        background: $brand-blue;
+        color: #FFF;
+    }
+    span {
+        display: block;
+    }
+    .date {
+        color: $brand-blue;
+        font-size: 2.8em;
+        line-height: 1.055em;
+    }
+    .month {
+        color: #BEBEBE;
+    }
+    .day {
+        color: $brand-red;
+    }
+    .duration {
+        text-align: center;
+        color: $brand-blue;
+        strong {
+            font-size: 2.8em;
+            line-height: 1.055em;
+            color: $brand-blue;
+            margin-right: 5px;
+        }
+        span {
+            display: inline-block;
+            height: 33px;
+            vertical-align: bottom;
+            font-size: 1.4em;
+        }
+        color: #BEBEBE;
+    }
+}
+.btn-group{
+    .btn{
+        font-family: $helvetica;
+        line-height: 120%;
+        font-size: 18px;
+        background-color: $brand-fcp;
+        @include transition(background-color .3s ease);
+        &:first-child{
+            border-right:0;
+        }
+        &:hover{
+            border-color:white;
+            background-color: darken($brand-fcp,5%);
+        }
+        &.active{
+            background-color: white;
+        }
+    }
+}
+/*OCCUPANCY*/
+.occupancy {
+    .select-occupancy {
+        @include border-radius($border-radius-base);
+        width: 100%;
+        padding: 15px;
+        font-size: 1.2em;
+        display: block;
+        background: #FFF;
+        color: $brand-blue;
+        &:hover {
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+}
+.occupancy-control {
+    .room {
+        @include border-radius($border-radius-base);
+    }
+}
+
+/*OVERLAY*/
+.overlay {
+    background: #FFF;
+    top: 0;
+    left: -100%;
+    position: fixed;
+    width: 100%;
+    min-height: 100%;
+    z-index: 99;
+    -moz-transition-property: left;
+    -o-transition-property: left;
+    -webkit-transition-property: left;
+    transition-property: left;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    .overlay--scroll {
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+    }
+    .overlay--header {
+        padding: $space-md 0;
+        h4 {
+            margin: 7px 0;
+        }
+    }
+    .overlay--content {
+        border-top: 1px solid #FFF;
+    }
+    .overlay--search {
+        background: #F2F2F2;
+        padding: $space-md;
+        .overlay--search-btn {
+            display: block;
+            background: #FFF;
+            padding: $space-sm;
+            @include border-radius($border-radius-base);
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}
+.overlay.active {
+    left: 0;
+}
+/*CHECKLIST*/
+.check-list {
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        li {
+            padding: $space-md $space-lg;
+            border-bottom: 1px solid #F2F2F2;
+            -webkit-user-select: none;
+            -webkit-overflow-scrolling: touch;
+            i {
+                color: $brand-blue;
+                font-size: 1.4em;
+                float: right;
+                display: none;
+            }
+        }
+        li.country-title {
+            background: $brand-blue;
+            color: #FFF;
+            padding: $space-sm $space-lg;
+            i {
+                color: #FFF;
+            }
+        }
+        li.active {
+            i { 
+                display: inline;
+            }
+        }
+        li.disabled {
+            i { 
+                display: none;
+            }
+            color: #F2F2F2;
+        }
+    }
+}
+
+/*NUMBER TOGGLE*/
+.number-toggle {
+    background: #FFF;
+    font-size: 1.2em;
+    -webkit-user-select: none;
+    .number-toggle--label {
+        line-height: 2.32em;
+    }
+    @include border-radius($border-radius-base);
+    .number-toggle--nav {
+        font-size: 1.6em;
+        i {
+            color: $brand-blue;
+        }
+    }
+}
+.number-toggle.withborder {
+    border: 1px solid #CCC;
+}
+
+/*SELECT TAG*/
+.select-tag {
+    position: relative;
+    &:after {
+        content: "\f078";
+        font-family: "fontawesome";
+        position: absolute;
+        color: $brand-blue;
+        top: 5px;
+        right: 15px;
+        font-size: 1.4em;
+    }
+    select {
+        width: 100%;
+        padding: $space-sm $space-md;
+        border: none;
+        background: #FFF;
+        -webkit-appearance: none;
+    }
+    
+}
+
+/*DATEPICKER*/
+#datepicker {
+    .ui-datepicker-header {
+        border: 1px solid  #F2F2F2;
+        padding: $space-sm;
+        @include border-radius($border-radius-base);
+        margin: $space-md 0;
+        text-align: center;
+        -webkit-user-select: none;
+        .ui-datepicker-prev {
+            float: left;
+            .ui-icon {
+                &:after {
+                    content: "\f137";
+                    left: 0 
+                }
+            }
+        }
+        .ui-datepicker-next {
+            float: right;
+            .ui-icon {
+                &:after {
+                    content: "\f138";
+                    right: 0;
+                }
+            }
+        }
+        select {
+            margin: 0 $space-sm;
+        }
+        .ui-icon {
+            position: relative;
+            &:after {
+                top: -4px;
+                font-family: "fontawesome";
+                position: absolute;
+                color: $brand-blue;
+                font-size: 1.8em;
+            }
+        }
+    }
+    table {
+        width: 100%;
+        tr {
+            th {
+                text-align: center;
+                span {
+                    display: block;
+                    background: $brand-blue;
+                    color: #FFF;
+                    padding: $space-sm;
+                }
+            }
+            td {
+                text-align: center;
+                border: 1px solid #F2F2F2;
+                a {
+                    display: block;
+                    padding: $space-sm;
+                    background: $brand-active;
+                    color: #FFF;
+                    &:hover {
+                        background: $brand-yellow;
+                        text-decoration: none;
+                    }
+                    &.ui-state-active{
+                        background: $brand-yellow;
+                    }
+                }
+                span {
+                    display: block;
+                    background: #F2F2F2;
+                    color: #CCC;
+                    padding: $space-sm;
+                }
+            }
+        }
+    }
+}
+#datepicker.invert {
+    .ui-datepicker-header {
+        .ui-icon {
+            &:after {
+                color: #FFF;
+            }
+        }
+    }
+    table {
+        tr {
+            th {
+                span {
+                    background: #FFF;
+                    color: $brand-fcp;
+                }
+            }
+        }
+    }
+}
+
+/*FILTERS*/
+.filter-label {
+    background: $brand-fcp-light;
+    position: relative;
+    min-height: 70px;
+    cursor: pointer;
+    p {
+        color: #FFF;
+    }
+    i {
+        color: #FFF;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+}
+.filter-label.filter-label--icon {
+    text-align: center;
+    i {
+        position: static;
+        line-height: 1.75em;
+    }
+}
+
+/*FILTER-BTN*/
+.filter-control--btn {
+    @include border-radius($border-radius-base);
+    background: #FFF;
+    color: $brand-blue;
+    font-family: helvetica-med-light;
+    i {
+        font-size: 1.4em;
+    }
+}
+
+/*SEARCH RESULTS*/
+.error {
+    background: $brand-red;
+    position: relative;
+    color: #FFF;
+    a {
+        color: #FFF;
+    }
+}
+.error.arrow-down {
+    &:after {
+        position: absolute;
+        content: "";
+        bottom: -$space-sm;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 30px 30px 0 30px;
+        border-color: $brand-red transparent transparent transparent;
+        left: 50%;
+        margin-left: -30px
+    }
+}
+.search-results--tabs {
+    .nav {
+        border-bottom: 1px solid #FFF;
+        li {
+            width: 50%;
+            a {
+                font-family: helvetica-med-light;
+                text-align: center;
+                color: $brand-fcp;
+                background: #FFF;
+                border: 1px solid #FFF;
+                border-bottom: none;
+                font-size: 18px;
+            }
+        }
+        li.active {
+            a {
+                color: #FFF;
+                background: $brand-fcp;
+                border: 1px solid #FFF;
+                border-bottom: none; 
+            }
+        }
+    }
+}
+
+/*HOTEL RESULT*/
+.hotel-result {
+    background: #FFF;
+    @include border-radius($border-radius-base);
+    .hotel-result--head {
+        h3, p {
+            color: $brand-blue;
+        }
+    }
+    figure{
+        position: relative;
+        overflow: hidden;
+        .product{
+            display: inline-block;
+            width: auto;
+            @include abs-pos(0,auto,auto,0);
+            z-index: 2;
+            &:after{
+                content:"";
+                @include abs-pos(0,0,0,-40px);
+                @include transform(skewX(-45deg));
+                display: block;
+                z-index: 2;
+            }
+            padding: 10px 30px 10px 20px;
+            h4 {
+                color: white;
+                margin:0;
+                font-size:18px;
+                text-align: center;
+                z-index: 3;
+                position: relative;
+            }
+            &.brand-4{
+                &:after{
+                    background-color:$family-fave; 
+                }
+            }
+            &.brand-3{
+                &:after{
+                    background-color: $on-tour;
+                }
+            }
+            &.brand-6{
+                &:after{
+                    background-color: $luxe;
+                }
+            }
+        } 
+        img {
+            width: 100%;
+            height:auto;
+            z-index: 1;
+        }
+    }
+   
+    .hotel-result--stars {
+        color: $brand-blue;
+        span {
+            display: block;
+        }
+    }
+    .hotel-result--content {
+        
+    }
+    .hotel-result--options {
+        background: #FFF;
+        position: relative;
+        top: -10px;
+        padding: $space-sm 5px;
+    }
+    .hotel-result--btn {
+        background: $brand-light-blue;
+        color: #FFF;
+        display: block;
+        text-align: center;
+        padding: $space-sm;
+        @include transition(background-color .3s ease);
+        &:hover,&:active,&.active {
+            background: $brand-blue;
+            text-decoration: none;
+        }
+    }
+    .hotel-result--info {
+        color: $brand-blue;
+        text-align:  center;
+    }
+    .hotel-result--sale {
+        border: 1px solid #F2F2F2;
+        text-align: center;
+    }
+    .hotel-result--price {
+        span {
+            display: block;
+            &:first-of-type {
+                font-family: helvetica-med-light;
+                font-size: 3em;
+                line-height: 1.28em;
+            }
+            sub {
+                font-size: 0.3em;
+                position: relative;
+                top: -3px;
+            }
+        }
+    }
+    .trip-advisor {
+        color: #5C9438;
+        img {
+            margin: 5px 0;
+            width: 100px;
+        }
+        p {
+            &:last-of-type {
+                font-size: 0.8em;
+            }
+        }
+    }
+}
+
+
+
+/*LOADER*/
+.loader {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 97;
+    text-align: center;
+    padding-top: $space-lg;
+    img {
+        width: 200px;
+    }
+    .loader--text {
+        position: absolute;
+        width: 100%;
+        top: $space-xl;
+        margin-top: $space-sm;
+        padding: $space-md;
+        color: $brand-blue;
+        span {
+            display: block;
+            font-size: 3em;
+            line-height: 1em;
+        }
+    }
+}
+
+/*FILTER AIRPORT LISTS*/
+.search-filter {
+    .input-wrap {
+        position: relative;
+        &:before {
+            content:"\f002";
+            top: 7px;
+            left: 20px;
+            font-family: "fontawesome";
+            position: absolute;
+            color: $brand-blue;
+        }
+    }
+    input {
+        width: 100%;
+        padding: 7px $space-sm 7px $space-lg;
+        border: none;
+        @include border-radius($border-radius-base);
+        @include input-placeholder {
+            color: $brand-blue;
+        }
+    }
+}
+
+/*LIST SELECTED*/
+.selected {
+    span {
+        display: inline-block;
+        background: $brand-red;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        @include border-radius(50%);
+    }
+}

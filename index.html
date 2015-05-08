@@ -78,60 +78,51 @@
                 <a class="btn btn-default active" role="button" href="#">Free Child<br />Places</a>
             </div>
             <h3 class="margin-top--0">Free Child Place Finder</h3>
-            <form class="margin-top--md">
+            <form id="fcp-search" class="margin-top--md" method="post" action="search-results.html">
                 <fieldset class="margin-bottom--md flying-from">
-                    <div class="select-departure-airport input" type="text"><i class="fa fa-plane"></i> <span>Flying from...</span></div>
+                    <div class="select-departure-airport input" type="text" data-title="departure airport" data-control="departure-airports-control"><i class="fa fa-plane"></i> <span>Flying from...</span></div>
                 </fieldset>
                 <fieldset class="destination">
-                    <div class="select-destination input" type="text"><i class="fa fa-globe"></i> <span>Going to...</span></div>
+                    <div class="select-destination input" type="text" data-title="destination" data-control="destinations-control"><i class="fa fa-globe"></i> <span>Going to...</span></div>
                 </fieldset>
                 <div class="row margin-top--md margin-bottom--md">
                     <div class="col-xs-12 col-sm-6">
-                        <div class="select-dates date-select">
-                            <h5 class="padding--sm margin--0">Leaving</h5>
-                            <div class="padding--sm">
-                                <span class="date pull-left margin-right--sm"><strong>13</strong></span>
-                                <div class="pull-left">
-                                    <span class="month">Aug 2015</span>
-                                    <span class="day">Thursday</span>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>    
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6">
-                        <div class="date-select">
-                            <h5 class="padding--sm margin--0">Duration</h5>
-                            <div class="padding--sm">
-                                <div class="duration"><strong class="hidden">7</strong> <span>Please Select</span></div>
-                            </div>    
-                        </div>
-                    </div>
+<fieldset class="margin-bottom--md">
+<div class="select-dates input" type="text" data-title="destination" data-control="destinations-control"><i class="fa fa-calendar"></i> <span>Leaving 13/08/2015</span></div>
+</fieldset>
+<fieldset>
+<div class="input" type="text" data-title="duration" data-control="duration-control"><i class="fa fa-bed"></i> <span>Duration 7 Nights</span></div>
+</fieldset
+
+
+                       
                 </div>
                 <div class="occupancy">
                     <h4>Rooms &amp; Passengers</h4>
                     <a class="select-occupancy"><strong class="margin-right--sm">1 Room</strong> 2 Adults, 0 Children</a>
                 </div>   
-                <a class="btn btn-lg btn-block btn-blue margin-top--md" href="search-results.html">Search Holidays</a>
+                 <button type="submit" class="btn btn-lg btn-block btn-blue margin-top--md">Search Holidays</button>
+         
             </form>
         </div>
     </section>
 </div>
-    
+
 <!-- OVERLAYS -->
-<div class="overlay departure-airports-control">
-    <div class="overlay--scroll">
-        <div class="overlay--header fcp">
+<div class="overlay departure-airports-control fixed-header">
+    <div class="overlay--header fcp">
             <div class="container">
                 <h4 class="pull-left">Select Airport(s)</h4>
                 <a href="#" class="btn btn-default pull-right done">Done</a>
                 <div class="clearfix"></div>
             </div>
         </div>
+    <div class="overlay--scroll">
+        
         <div class="overlay--content">
             <div class="check-list">
                 <ul>
-                    <li class="active">Airport Name <i class="fa fa-check"></i></li>
+                    <li>Airport Name <i class="fa fa-check"></i></li>
                     <li>Airport Name <i class="fa fa-check"></i></li>
                     <li>Airport Name <i class="fa fa-check"></i></li>
                     <li>Airport Name <i class="fa fa-check"></i></li>
@@ -148,8 +139,8 @@
     </div>    
 </div>
 
-<div class="overlay destinations-control">
-    <div class="overlay--scroll">
+<div class="overlay destinations-control fixed-header">
+     <!-- header -->
         <div class="overlay--header fcp">
             <div class="container">
                 <h4 class="pull-left">Select Destination(s)</h4>
@@ -162,6 +153,9 @@
                 </div>
             </div>
         </div>
+        <!-- /header -->
+    <div class="overlay--scroll">
+
         <div class="overlay--search">
             <a class="overlay--search-btn">
                 <i class="fa fa-search"></i> Type Destination Name
@@ -189,9 +183,8 @@
     </div>    
 </div>
 
-<div id="destination-filter" class="overlay">
-    <div class="overlay--scroll">
-        <div class="overlay--header fcp">
+<div id="destination-filter" class="overlay fixed-header">
+     <div class="overlay--header fcp">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-9">
@@ -208,6 +201,8 @@
                  
             </div>
         </div>
+    <div class="overlay--scroll">
+       
           
         <div class="overlay--content">
             <div class="check-list">
@@ -229,15 +224,16 @@
     </div>    
 </div>
 
-<div class="overlay dates-control">
-    <div class="overlay--scroll">
-        <div class="overlay--header fcp">
+<div class="overlay dates-control fixed-header">
+     <div class="overlay--header fcp">
             <div class="container">
                 <h4 class="pull-left">Select Departure Date</h4>
                 <a href="#" class="btn btn-default pull-right done">Done</a>
                 <div class="clearfix"></div>
             </div>
         </div>
+    <div class="overlay--scroll">
+       
         <div class="overlay--content">
             <div class="container">
                 <div id="datepicker">
@@ -247,59 +243,64 @@
     </div>    
 </div>
     
-<div class="overlay occupancy-control">
-    <div class="overlay--scroll">
-        <div class="overlay--header fcp">
+<div class="overlay occupancy-control fixed-header">
+     <div class="overlay--header fcp">
             <div class="container">
                 <h4 class="pull-left">Select Rooms &amp; Passengers</h4>
                 <a href="#" class="btn btn-default pull-right done">Done</a>
                 <div class="clearfix"></div>
             </div>
         </div>
+    <div class="overlay--scroll">
+       
         <div class="overlay--content">
             <div class="container padding-top--md padding-bottom--md">
-                <div class="number-toggle withborder padding--sm">
+                <div class="number-toggle select-rooms-control withborder padding--sm">
                     <div class="number-toggle--label pull-left">
                         Number of Rooms
                     </div>
-                    <div class="number-toggle--nav pull-right">
+                    <div class="number-toggle--nav pull-right"  data-min="1" data-max="5">
                         <ul class="list-inline margin-bottom--0">
                             <li><i class="fa fa-minus-circle"></i></li>
-                            <li><span class="number-toggle--number">0</span></li>
+                            <li><span class="number-toggle--number">1</span></li>
                             <li><i class="fa fa-plus-circle"></i></li>
                         </ul>
                     </div>
                     <div class="clearfix"></div>
                 </div>
-                <div class="fcp padding--md room margin-top--md">
-                    <h4 class="margin-top--0">Room 1</h4>
-                    <div class="number-toggle padding--sm">
+                <!-- room panel -->
+                <div class="rooms">
+                <div class="room-occupancy fcp padding--md room margin-top--md">
+                    <h4 class="room-title margin-top--0">Room 1</h4>
+                    <div class="select-adults-control number-toggle padding--sm"  data-title="adult">
                         <div class="number-toggle--label pull-left">
                             Adults
                         </div>
-                        <div class="number-toggle--nav pull-right">
+                        <div class="number-toggle--nav pull-right" data-min="0" data-max="9">
                             <ul class="list-inline margin-bottom--0">
                                 <li><i class="fa fa-minus-circle"></i></li>
-                                <li><span class="number-toggle--number">2</span></li>
+                                <li><span class="number-toggle--number">1</span></li>
                                 <li><i class="fa fa-plus-circle"></i></li>
                             </ul>
                         </div>
                         <div class="clearfix"></div>
                     </div>
-                    <div class="number-toggle padding--sm margin-top--md">
+                    <div class="select-children-control number-toggle padding--sm margin-top--md" data-title="child">
                         <div class="number-toggle--label pull-left">
                             Children
                         </div>
-                        <div class="number-toggle--nav pull-right">
+                        <div class="number-toggle--nav pull-right" data-min="0" data-max="5">
                             <ul class="list-inline margin-bottom--0">
                                 <li><i class="fa fa-minus-circle"></i></li>
-                                <li><span class="number-toggle--number">2</span></li>
+                                <li><span class="number-toggle--number">1</span></li>
                                 <li><i class="fa fa-plus-circle"></i></li>
                             </ul>
                         </div>
                         <div class="clearfix"></div>
                     </div>
                     <div class="child-ages margin-top--md">
+
+                        <div class="child">
                         <h4>Age of child 1</h4>
                         <div class="select-tag">
                             <select>
@@ -310,25 +311,18 @@
                                 <option>4</option>
                             </select>
                         </div> 
-                        <h4>Age of child 2</h4>
-                        <div class="select-tag">
-                            <select>
-                                <option>0</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                            </select>
-                        </div> 
+                    </div>
+                    
                     </div>
                 </div>
-                <a class="btn btn-lg btn-block btn-blue margin-top--md">Confirm</a>
+                <!-- /room panel -->
+            </div>
+                <a id="confirm-rooms" class="btn btn-lg btn-block btn-blue margin-top--md">Confirm</a>
             </div>    
         </div>
     </div>
 </div>
 <footer id="footer" role="footer">
-<a id="back-to-top" href="#" onclick="ga('send','event','link', 'click', 'Footer Back to Top');">Back to top</a>
 <div id="cta">
 <p>Prefer to speak to one of our expert holiday advisors?</p>
 <p><a href="tel:0113 457 0545" onclick="ga('send','event','link', 'click', 'Footer Telephone');">0113 457 0545</a></p>
@@ -355,6 +349,7 @@
 <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <script src="javascripts/libs/bootstrap.min.js"></script>
 <script src="javascripts/nav.js"></script>
+<script src="javascripts/scripts.js"></script>
 <script src="http://listjs.com/no-cdn/list.js"></script>
 <script>
 var options = {
@@ -376,7 +371,12 @@ $(function() {
 <script>
     $(document).ready(function() {
         var windowH = $(window).height();
+        var fixed_header_height = $('.fixed-header .overlay--header').outerHeight();
+       
+        var fixed_header_scroll_height = windowH - fixed_header_height;
         $('.overlay--scroll').css('height', windowH + 'px');
+        //allow for fixed header on destinations control
+        $('.fixed-header .overlay--scroll').css('height',fixed_header_scroll_height + 'px');
     });
 </script>
 <script>

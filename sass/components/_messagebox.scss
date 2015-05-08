@@ -4,8 +4,8 @@
     top: 0;
     width: 100%;
     z-index: 999;
-    font-size: 18px; 
-    //display: none;
+    font-size: 14px; 
+    display: none;
     border-bottom: 3px solid #1E3146;
     padding: 4% 4% 2em;
     .wrapper{
@@ -26,21 +26,21 @@
         p{
             margin: 0;
             color: #1E3146;
-            font-size: 18px;
+            font-size: 14px;
             margin: 0;
             font-weight: 700; 
             i,span{
-                height:50px;
-                line-height: 50px;
+                height:30px;
+                line-height: 30px;
                 display: inline-block;
                 float:left;
             }
             i{
-                width:50px;
-                line-height: 46px;
+                width:30px;
+                line-height: 26px;
                 text-align: center;
-                border:3px solid #000;
-                font-size: 32px;
+                border:2px solid #000;
+                font-size: 20px;
                 @include border-radius(50%);
                 margin-right: 10px;
             }
@@ -63,36 +63,38 @@
         @media only screen and (max-width : $screen-xs){
             @include abs-pos(40px,0,auto,auto);
         }
-     }   
+    }   
 }
 
 /* Media Queries */
 
-@media only screen and (max-width : $screen-xs){
+@media only screen and (min-width : $screen-sm){
 
     .messagebox {
-        font-size: 14px;
+        font-size: 18px;
         .wrapper{
              width:80%;
             max-width: 600px;
         }
         .container{
             p{
-                font-size: 14px;
+                font-size: 18px;
                 i,span{
-                    line-height: 30px;
-                    height: 30px; 
+                    line-height: 50px;
+                    height: 50px; 
                 }
                 i{
-                    width:30px;
-                    height: 30px;
-                    line-height: 26px;
-                    font-size: 20px;
-                    border: 2px solid #000;
+                    width:50px;
+                    height: 50px;
+                    line-height: 46px;
+                    font-size: 32px;
+                    border: 3px solid #000;
                 }
             }
         }
     }
 
 }
+
+
 

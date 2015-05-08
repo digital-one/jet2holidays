@@ -97,7 +97,7 @@
             <div class="search-results--tabs" role="tabpanel">
                 <ul class="nav nav-tabs " role="tablist">
                     <li role="presentation" class="active"><a href="#results" id="results-tab" role="tab" data-toggle="tab" aria-controls="results" aria-expanded="true">Fri 7th May</a></li>
-                    <li role="presentation"><a href="#calendar" role="tab" id="calendar-tab" data-toggle="tab" aria-controls="calendar">Other Dates in May</a></li>
+                    <li role="presentation"><a href="#calendar" role="tab" id="calendar-tab" data-toggle="tab" aria-controls="calendar">Show Month</a></li>
                 </ul>
                 <div id="myTabContent" class="tab-content padding-top--md padding-bottom--lg">
                     <div role="tabpanel" class="tab-pane fade in active" id="results" aria-labelledBy="results-tab">
@@ -122,7 +122,7 @@
                                 <div class="row">
                                     <div class="hotel-result--options">
                                         <div class="col-xs-4">
-                                            <a class="hotel-result--btn"><i class="fa fa-camera-retro"></i> Gallery</a>
+                                            <a class="hotel-result--btn"><i class="fa fa-camera"></i> Gallery</a>
                                         </div>
                                         <div class="col-xs-4">
                                             <a class="hotel-result--btn save"><i class="fa fa-plus-circle"></i> <span>Save</span></a>
@@ -379,10 +379,23 @@
         </div>
     </section>
 </div>
-    
+<!-- GALLERY OVERLAY -->
+<div class="gallery-overlay">
+    <a class="close">Close</a>
+    <div class="inner">
+<div class="vcenter">
+    <div class="slider">
+        <div class="slide"> <img src="http://www.jet2holidays.com/HotelImages/Web/FAO_70283_SILCHORO_APTS_1012_01.jpg" /></div>
+         <div class="slide"> <img src="http://www.jet2holidays.com/HotelImages/Web/FAO_70283_SILCHORO_APTS_1012_01.jpg" /></div>
+    </div>
+</div>
+</div>
+</div>
+
+
 <!-- OVERLAYS -->
-<div class="overlay sortby-control">
-    <div class="overlay--scroll">
+<div class="overlay sortby-control fixed-header">
+     <!--header-->
         <div class="overlay--header fcp">
             <div class="container">
                 <h4 class="pull-left">Sort By</h4>
@@ -390,7 +403,9 @@
                 <div class="clearfix"></div>
             </div>
         </div>
-        <div class="overlay--content">
+        <!--/header-->
+    <div class="overlay--scroll">
+    <div class="overlay--content">
             <div class="check-list">
                 <ul>
                     <li class="active">Recommended <i class="fa fa-check"></i></li>
@@ -403,8 +418,8 @@
         </div>
     </div>    
 </div>
-<div class="overlay filter-control">
-    <div class="overlay--scroll">
+<div class="overlay filter-control fixed-header">
+     <!--header-->
         <div class="overlay--header fcp">
             <div class="container">
                 <h4 class="pull-left">Filter <span>57</span> Free Child Places</h4>
@@ -412,6 +427,9 @@
                 <div class="clearfix"></div>
             </div>
         </div>
+        <!--/header-->
+    <div class="overlay--scroll">
+
         <div class="overlay--content fcp padding-top--lg padding-bottom--lg">
             <div class="container">
                 <section class="filter--flying-from margin-bottom--md">
@@ -469,15 +487,17 @@
         </div>
     </div>
 </div>
-<div class="overlay departure-airports-control">
-    <div class="overlay--scroll">
-        <div class="overlay--header fcp">
+<div class="overlay departure-airports-control fixed-header">
+     <div class="overlay--header fcp">
             <div class="container">
                 <h4 class="pull-left">Select Airport(s)</h4>
                 <a href="#" class="btn btn-default pull-right back"><i class="fa fa-chevron-left"></i> Back</a>
                 <div class="clearfix"></div>
             </div>
         </div>
+
+    <div class="overlay--scroll">
+       
         <div class="overlay--content">
             <div class="check-list">
                 <ul>
@@ -495,7 +515,6 @@
 </div>
 
 <footer id="footer" role="footer">
-<a id="back-to-top" href="#" onclick="ga('send','event','link', 'click', 'Footer Back to Top');">Back to top</a>
 <div id="cta">
 <p>Prefer to speak to one of our expert holiday advisors?</p>
 <p><a href="tel:0113 457 0545" onclick="ga('send','event','link', 'click', 'Footer Telephone');">0113 457 0545</a></p>
@@ -513,12 +532,18 @@
     <li><a href="http://www.jet2holidays.com/?desktop=true" onclick="ga('send','event','link', 'click', 'Footer Main website');">Main Website</a></li>
 </ul>
 </nav>
+<a class="back-to-top">
+        <i class="fa fa-chevron-up"></i>
+        <span>Back to top</span>
+    </a>
 </footer>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <script src="javascripts/libs/bootstrap.min.js"></script>
+<script src="javascripts/libs/jquery.scrollTo.min.js"></script>
+<script src="javascripts/libs/slick/slick.min.js"></script>
 <script src="javascripts/nav.js"></script>
 <script src="javascripts/scripts.js"></script>
 <script>
@@ -534,7 +559,12 @@ $(function() {
 <script>
     $(document).ready(function() {
         var windowH = $(window).height();
+        var fixed_header_height = $('.fixed-header .overlay--header').outerHeight();
+       
+        var fixed_header_scroll_height = windowH - fixed_header_height;
         $('.overlay--scroll').css('height', windowH + 'px');
+        //allow for fixed header on destinations control
+        $('.fixed-header .overlay--scroll').css('height',fixed_header_scroll_height + 'px');
     });
 </script>
 <script>
@@ -546,6 +576,7 @@ function fadeMyDiv() {
    $(".loader").fadeOut('slow');
 }
 </script>
+
 <script>
     $('.filter--sortby').click(function() {
         $('.sortby-control').toggleClass('active');
